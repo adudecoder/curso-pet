@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    position: relative;
+    left: 50px;
+    top: 150px;
+}
+
+strong {
+    border-bottom: 1px solid #000;
+}
