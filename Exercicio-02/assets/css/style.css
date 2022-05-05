@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 20%;
+}
+
+.content p {
+    margin-bottom: 40px;
+    font-family: Arial;
+}
+
+.rules {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial;
+}
+
+.rules a {
+    width: 160px;
+    height: 57px;
+    line-height: 40px;
+    padding: 10px 5px;
+    margin: 20px;
+    background-color: #000;
+    color: #FFF;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.rules a:hover {
+    color: #000;
+    background-color: #7a7a76;
+}
+
+/* Style for rules-01 STARTS */
+.container-rules {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content-rules h1 {
+    margin-bottom: 50px;
+    margin-top: 20%;
+}
+
+.content-rules h3 {
+    margin-bottom: 50px;
+}
+
+.content-rules p {
+    margin-bottom: 50px;
+}
+
+.swap-rules {
+    display: flex;
+    justify-content: space-around;
+}
+
+.swap-rules a {
+    text-decoration: none;
+    width: 160px;
+    height: 57px;
+    line-height: 40px;
+    padding: 10px 5px;
+    margin: 20px;
+    background-color: #000;
+    color: #FFF;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.swap-rules a:hover {
+    color: #000;
+    background-color: #7a7a76;
+}
+/* Style for rules-01 ENDS */
