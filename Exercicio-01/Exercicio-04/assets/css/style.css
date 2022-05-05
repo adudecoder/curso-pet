@@ -1,0 +1,17 @@
+.titleFirst {
+    font-size: small;
+    color: green;
+}
+
+.titleSecond {
+    font-size: large;
+    color: red;
+}
+
+strong {
+    color: black;
+}
+
+.titleSecond span {
+    color: blue;
+}

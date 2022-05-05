@@ -1,0 +1,59 @@
+img {
+    width: 50%;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.titles {
+    position: relative;
+    left: 5px;
+}
+
+.titles-2 {
+    position: relative;
+    top: 75px;
+    right: 85px;
+}
+
+.content-2 {
+    display: flex;
+    align-items: center;
+}
+
+.titles-3 {
+    position: relative;
+    left: 30%;
+}
+
+.titles-4 {
+    position: relative;
+    left: 25px;
+}
+
+.content-3 {
+    display: flex;
+    align-items: center;
+}
+
+.titles-5 {
+    position: relative;
+    left: 50%;
+}
+
+.titles-6 {
+    position: relative;
+    left: 20%;
+}
+
+.content-4 {
+    display: flex;
+    align-items: center;
+}
+
+.titles-7 {
+    position: relative;
+    left: 64%;
+}
