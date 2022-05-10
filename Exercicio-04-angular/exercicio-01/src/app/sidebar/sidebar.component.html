@@ -1,0 +1,27 @@
+<mat-sidenav-container>
+
+  <mat-sidenav mode="side" opened>Conteúdo da sidenav</mat-sidenav>
+
+  <mat-sidenav-content>Conteúdo da página</mat-sidenav-content>
+
+</mat-sidenav-container>
+
+<mat-sidenav-container>
+
+  <mat-sidenav #variavelLocalSidenav mode="side">
+
+    Conteúdo da sidenav
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <button (click)="variavelLocalSidenav.toggle()">
+
+      Click aqui
+
+    </button>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

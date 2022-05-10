@@ -1,0 +1,43 @@
+<!-- Submenus -->
+<button [matMenuTriggerFor]="meuMenu">Menu</button>
+
+<mat-menu #meuMenu="matMenu">
+
+<button mat-menu-item>Item 1</button>
+
+<button mat-menu-item>Item 2</button>
+
+</mat-menu>
+
+<!-- Submenus para os botões do submenu -->
+<button [matMenuTriggerFor]="menuComSubmenu">Mega menu</button>
+
+  <mat-menu #menuComSubmenu="matMenu">
+
+  <button mat-menu-item [matMenuTriggerFor]="submenu1">Submenu 1</button>
+
+  <button mat-menu-item [matMenuTriggerFor]="submenu2">Submenu 2</button>
+
+</mat-menu>
+
+
+<mat-menu #submenu1="matMenu">
+
+  <button mat-menu-item>Item 1</button>
+
+  <button mat-menu-item>Item 2</button>
+
+</mat-menu>
+
+
+<mat-menu #submenu2="matMenu">
+
+  <button mat-menu-item>Item 1</button>
+
+  <button mat-menu-item>Item 2</button>
+
+  <button mat-menu-item>Item 3</button>
+
+  <button mat-menu-item>Item 4</button>
+
+</mat-menu>
