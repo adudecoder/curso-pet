@@ -1,0 +1,51 @@
+<form [formGroup]="loginForm">
+  <mat-card class="login-data">
+    <fieldset>
+      <legend> <h2>Dados de Login</h2> </legend>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="E-mail" formControlName="email">
+            <mat-error *ngIf="loginForm.controls['email'].hasError('required')">
+              Preencha o E-mail <strong>Campo Vázio</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <label matInput>Imagem de perfil:</label>
+          <input type="file" class="file-upload">
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput #userLogin maxlength="10" placeholder="Login de usuário" formControlName="userLogin">
+            <mat-hint align="end">{{userLogin.value.length}} / 10</mat-hint>
+            <mat-error *ngIf="loginForm.controls['userLogin'].hasError('required')">
+              Preencha o Login de usuário <strong>Campo Vázio</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput #password maxlength="7" type="password" placeholder="Senha" formControlName="password">
+            <mat-hint align="end">{{password.value.length}} / 7</mat-hint>
+            <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+              Preencha a senha <strong>Campo Vázio</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Confirme a senha" type="password" formControlName="cpassword">
+            <mat-error *ngIf="loginForm.controls['cpassword'].hasError('required')">
+              Preencha a senha novamente <strong>Campo Vázio</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </fieldset>
+  </mat-card>
+</form>

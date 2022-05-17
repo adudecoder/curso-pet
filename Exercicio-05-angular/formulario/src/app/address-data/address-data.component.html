@@ -1,0 +1,71 @@
+<form [formGroup]="addressForm">
+  <mat-card class="address-form">
+    <fieldset>
+      <legend> <h2>Dados de Endereço</h2> </legend>
+      <mat-card-content>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Rua" formControlName="street">
+              <mat-error *ngIf="addressForm.controls['street'].hasError('required')">
+                Preencha a rua <strong>Campo Vázio</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Número" formControlName="number">
+              <mat-error *ngIf="addressForm.controls['number'].hasError('required')">
+                Preencha o número da residência <strong>Campo Vázio</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput #address maxlength="55" placeholder="Bairro" formControlName="address">
+              <mat-hint align="end">{{address.value.length}} / 55</mat-hint>
+              <mat-error *ngIf="addressForm.controls['address'].hasError('required')">
+                Preencha o nome do bairro <strong>Campo Vázio</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="Cidade" formControlName="city">
+              <mat-error *ngIf="addressForm.controls['city'].hasError('required')">
+                Preencha o nome da cidade cidade <strong>Campo Vázio</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="full-width">
+              <mat-select placeholder="Estado" formControlName="state">
+                <mat-option *ngFor="let state of states" [value]="state.abbreviation">
+                  {{ state.name }}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="addressForm.controls['state'].hasError('required')">
+                Escolha o estado <strong>Estado não escolhido</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="full-width">
+              <input matInput #postalCode maxlength="9" mask="00000-000" placeholder="CEP - 00000-000" formControlName="postalCode">
+              <mat-hint align="end">{{postalCode.value.length}} / 9</mat-hint>
+              <mat-error *ngIf="addressForm.controls['postalCode'].hasError('required')">
+                Preencha o CEP <strong>Campo Vázio</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+    </fieldset>
+  </mat-card>
+</form>

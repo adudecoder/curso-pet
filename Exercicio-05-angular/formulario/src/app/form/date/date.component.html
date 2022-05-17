@@ -1,0 +1,16 @@
+<form [formGroup]="DateForm" novalidate>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+     <mat-label>Data de Nascimento</mat-label>
+     <input matInput #birthDay [matDatepicker]="picker" formControlName="birthDay">
+     <mat-error *ngIf="DateForm.controls['birthDay'].hasError('required')">
+      Insira a data de nascimento <strong>Campo Vázio</strong>
+    </mat-error>
+     <mat-hint>MM/DD/YYYY</mat-hint>
+     <mat-datepicker-toggle matSuffix [for]="picker">
+       <mat-icon matDatepickerToggleIcon>insert_invitation</mat-icon>
+     </mat-datepicker-toggle>
+     <mat-datepicker #picker></mat-datepicker>
+   </mat-form-field>
+
+</form>

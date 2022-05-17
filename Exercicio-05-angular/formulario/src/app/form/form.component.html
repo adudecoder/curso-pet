@@ -1,0 +1,73 @@
+<form [formGroup]="PersonalForm" (ngSubmit)="onSubmit()">
+  <mat-card class="personalDatas">
+    <h1>Formulário de Cadastro</h1>
+        <fieldset>
+          <legend> <h2>Dados Pessoais</h2> </legend>
+          <mat-card-content>
+            <div class="row">
+              <div class="col">
+                <mat-form-field class="full-width">
+                  <input matInput #firstName maxlength="55"  placeholder="Primeiro nome" formControlName="firstName">
+                  <mat-hint align="end">{{firstName.value.length}} / 55</mat-hint>
+                  <mat-error *ngIf="PersonalForm.controls['firstName'].hasError('required')">
+                    Preencha o primeiro nome <strong>Campo Vázio</strong>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field class="full-width">
+                  <input matInput #lastName maxlength="55" placeholder="Sobrenome" formControlName="lastName">
+                  <mat-hint align="end">{{lastName.value.length}} / 55</mat-hint>
+                  <mat-error *ngIf="PersonalForm.controls['lastName'].hasError('required')">
+                    Preencha o sobrenome nome <strong>Campo Vázio</strong>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <mat-form-field class="full-width">
+                  <input matInput #idCard maxlength="9" mask="0.000.000" placeholder="RG - 0.000.000" formControlName="idCard">
+                  <mat-hint align="end">{{idCard.value.length}} / 9</mat-hint>
+                  <mat-error *ngIf="PersonalForm.controls['idCard'].hasError('required')">
+                    Insira o número do RG <strong>Campo Vázio</strong>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <div class="container-radio">
+                  <label>Escolha seu gênero</label>
+                  <div class="radio">
+                    <mat-radio-group aria-label="Escolha Seu Gênero" color="primary">
+                      <mat-radio-button class="marg" value="1">Masculino</mat-radio-button>
+                      <mat-radio-button value="2">Feminino</mat-radio-button>
+                    </mat-radio-group>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <mat-form-field class="full-width">
+                  <!--<input matInput #ssnCard maxlength="13" placeholder="CPF" formControlName="ssnCard">-->
+                  <input matInput #ssnCard maxlength="14" mask="000.000.000-00" placeholder="CPF - 000.000.000-00" formControlName="ssnCard">
+                  <mat-hint align="end">{{ssnCard.value.length}} / 14</mat-hint>
+                  <mat-error *ngIf="PersonalForm.controls['ssnCard'].hasError('required')">
+                    Insira o número do CPF <strong>Campo Vázio</strong>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <app-date></app-date>
+              </div>
+            </div>
+          </mat-card-content>
+          <app-address-data></app-address-data>
+          <app-login-data></app-login-data>
+        </fieldset>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" type="submit">Consultar</button>
+          <button mat-raised-button color="primary" (click)="onReset()" type="reset">Limpar</button>
+        </mat-card-actions>
+  </mat-card>
+</form>
